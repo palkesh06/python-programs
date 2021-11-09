@@ -645,4 +645,215 @@ print(middleOfThree(a, b, c))
 
 52.
 
+class Rectangle():
+    def __init__(self, l, w):
+        self.length = l
+        self.width  = w
+
+    def rectangle_area(self):
+        return self.length*self.width
+
+newRectangle = Rectangle(12, 10)
+print(newRectangle.rectangle_area())
+
+
+53. 
+
+
+def func(a, b):
+    def cal(a,b):
+        return a+b
+    res = cal(a,b) + 5
+    return res
+func(4,4)  
+
+54.
+def recurSum(n):
+    if n <= 10:
+        return n
+    return n   *  recurSum(n - 1)
+ 
+
+n = 100
+print(recurSum(n))
+
+55.
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+n=int(input("Input a number to compute the factiorial : "))
+print(factorial(n))
+
+
+56.
+
+nl=[]
+for x in range(100,500):
+    if (x%7==0) and (x%5==0):
+        nl.append(str(x))
+print (','.join(nl))
+
+57.
+num = 11
+
+if num > 1:
+
+	for i in range(2, int(num/2)+1):
+
+		
+		if (num % i) == 0:
+			print(num, "is not a prime number")
+			break
+	else:
+		print(num, "is a prime number")
+
+else:
+	print(num, "is not a prime number")
+
+58. 
+
+def power_1(A, B):  
+        
+    if B == 0:  
+        return 1  
+    if B % 2 == 0:  
+        return power_1(A, B // 2) * power(A, B // 2)  
+            
+    return A * power(A, B // 2) * power(A, B // 2)  
+    while (A != 0):  
+        N = N + 1  
+        A = A // 10  
+            
+    return N  
+            
+    N = order_1(A)  
+    temp_1 = A  
+    sum_1 = 0  
+        
+    while (temp_1 != 0):  
+        R_1 = temp_1 % 10  
+        sum_1 = sum_1 + power_1(R_1, N)  
+        temp_1 = temp_1 // 10  
+    
+    return (sum_1 == A)  
+
+A = int(input("Please enter the number to be checked: "))  
+print(is_Armstrong(A))  
+
+59.
+
+class Parent:
+
+	def __init__(self):
+		self.String1 ="Hello"
+		self.String2 ="World"
+
+	def Function2(self):
+		print("Function2 : ", self.String1)
+		return
+
+class Child(Parent):
+
+	def Function1(self):
+		self.Function2()
+		print("Function1 : ", self.String2)
+		return
+Object1 = Parent()
+Object2 = Child()
+
+Object2.Function1()
+
+62.
+number = int(input("Enter the Number: "))
+sum = 0
+for value in range(1, number + 1):
+    sum = sum + value
+print(sum)
+
+63.
+
+print("Enter 10 Elements of List: ")
+nums = []
+for i in range(10):
+    nums.insert(i, input())
+print("Enter an Element to Insert at End: ")
+elem = input()
+nums.append(elem)
+print("\nThe New List is: ")
+print(nums)
+
+64.
+
+my_list = []                        # Initialize array
+while True:
+    number = 0.0
+    input_number = input('Enter a number: ')
+    if input_number == 'done':
+        break
+
+    try:
+        number = float(input_number)
+    except ValueError:
+        print('Invalid input')
+        quit()
+
+    my_list.append(input_number)
+
+if my_list:
+    print('Maximum: ', max(my_list) or None)
+    print('Minimum: ', min(my_list) or None)
+    
+66.
+  
+  myList = ["Bran",11,22,33,"Stark",22,33,11]
+ 
+myList.pop(1)
+
+67.
+
+color = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+color = [x for (i,x) in enumerate(color) if i not in (0,4,5)]
+print(color)
+
+
+68.
+
+ # Python program to print all
+# sublist from a given list
+
+# function to generate all the sub lists
+def sub_lists (l):
+	lists = [[]]
+	for i in range(len(l) + 1):
+		for j in range(i):
+			lists.append(l[j: i])
+	return lists
+
+# driver code
+l1 = [1, 2, 3]
+print(sub_lists(l1))
+
+
+69.
+
+list1 = [340, 330, 500]
+list2 = [12, 17, 21]
+print(all(x >= 200 for x in list1))
+print(all(x >= 25 for x in list2))
+
+
+
+70.
+
+list1 = [10, 21, 4, 45, 66, 93, 11]
+even_nos = list(filter(lambda x: (x % 2 == 0), list1))
+
+print("Even numbers in the list: ", even_nos)
+
+
+
+
 
